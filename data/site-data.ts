@@ -1,3 +1,21 @@
+import {
+  Boxes,
+  BrainCircuit,
+  Building2,
+  ClipboardCheck,
+  Compass,
+  Gauge,
+  GraduationCap,
+  Handshake,
+  MessagesSquare,
+  Network,
+  PencilRuler,
+  Rocket,
+  Search,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+
 export type NavLink = { label: string; href: string };
 
 export const navLinks: NavLink[] = [
@@ -28,11 +46,13 @@ export type Capability = {
   title: string;
   description: string;
   bullets: string[];
+  icon: LucideIcon;
 };
 
 export const capabilities: Capability[] = [
   {
     number: "01",
+    icon: Compass,
     title: "Transformation Consulting",
     description:
       "Chiến lược chuyển đổi số, mô hình vận hành và roadmap ưu tiên theo giá trị kinh doanh.",
@@ -45,6 +65,7 @@ export const capabilities: Capability[] = [
   },
   {
     number: "02",
+    icon: Network,
     title: "Enterprise Architecture",
     description:
       "Kiến trúc hóa từ Business → Process → Data → Application → Integration → Technology.",
@@ -57,6 +78,7 @@ export const capabilities: Capability[] = [
   },
   {
     number: "03",
+    icon: ClipboardCheck,
     title: "PMO & Project Excellence",
     description:
       "Thiết lập governance để dự án minh bạch, ra quyết định nhanh và kiểm soát được vendor.",
@@ -69,6 +91,7 @@ export const capabilities: Capability[] = [
   },
   {
     number: "04",
+    icon: BrainCircuit,
     title: "AI & Intelligent Enterprise",
     description:
       "Đưa AI vào doanh nghiệp có chiến lược, có use case, có governance và có khả năng đo hiệu quả.",
@@ -81,6 +104,7 @@ export const capabilities: Capability[] = [
   },
   {
     number: "05",
+    icon: MessagesSquare,
     title: "Omnichannel & Customer Experience",
     description:
       "Thiết kế trải nghiệm xuyên suốt giữa CRM, Contact Center, web/app, loyalty, data và AI.",
@@ -93,6 +117,7 @@ export const capabilities: Capability[] = [
   },
   {
     number: "06",
+    icon: Boxes,
     title: "ERP & Enterprise Systems",
     description:
       "Đứng về phía khách hàng để làm rõ nhu cầu, chọn giải pháp và quản trị triển khai ERP hiệu quả.",
@@ -177,19 +202,19 @@ export const academyTags = [
 ];
 
 export const audiences = [
-  { title: "Enterprise", desc: "Kiến trúc / AI / PMO / ERP" },
-  { title: "SME & Growth Companies", desc: "Transformation / AI / advisory" },
-  { title: "Education & Universities", desc: "Academy / industry programs" },
-  { title: "Enterprise Partners", desc: "Omnichannel / ERP / solution ecosystem" },
+  { title: "Enterprise", desc: "Kiến trúc / AI / PMO / ERP", icon: Building2 },
+  { title: "SME & Growth Companies", desc: "Transformation / AI / advisory", icon: Rocket },
+  { title: "Education & Universities", desc: "Academy / industry programs", icon: GraduationCap },
+  { title: "Enterprise Partners", desc: "Omnichannel / ERP / solution ecosystem", icon: Handshake },
 ];
 
 export const workSteps = [
-  { title: "ASSESS", desc: "Hiểu đúng hiện trạng" },
-  { title: "ARCHITECT", desc: "Thiết kế đúng cấu trúc" },
-  { title: "SELECT", desc: "Chọn đúng giải pháp" },
-  { title: "TRANSFORM", desc: "Triển khai có governance" },
-  { title: "OPERATE", desc: "Đo lường & tối ưu" },
-  { title: "ENABLE", desc: "Đào tạo & chuyển giao" },
+  { title: "ASSESS", desc: "Hiểu đúng hiện trạng", icon: Search },
+  { title: "ARCHITECT", desc: "Thiết kế đúng cấu trúc", icon: PencilRuler },
+  { title: "SELECT", desc: "Chọn đúng giải pháp", icon: ClipboardCheck },
+  { title: "TRANSFORM", desc: "Triển khai có governance", icon: Rocket },
+  { title: "OPERATE", desc: "Đo lường & tối ưu", icon: Gauge },
+  { title: "ENABLE", desc: "Đào tạo & chuyển giao", icon: Users },
 ];
 
 export const leadership = {

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from '@/app/public/1791470533863_1207292598529529321_1207292598529529321_c7ba59bb9a5c85e5ec63e4cde29b382a.jpg'
 
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/data/site-data";
+import Image from "next/image";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -13,20 +15,21 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur [padding-top:env(safe-area-inset-top,0px)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 sm:py-4">
         <a href="#top" className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-brand text-lg font-extrabold text-white">
+          {/* <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-brand text-lg font-extrabold text-white">
             TD
-          </span>
+          </span> */}
+          <Image src={logo} alt="logo" className="flex h-20 w-20 items-center justify-center rounded-xl bg-gradient-brand text-lg font-extrabold text-white"/>
           <span className="leading-tight">
-            <span className="block font-extrabold tracking-tight text-slate-900">
+            <span className="block font-extrabold tracking-[0.2em] text-slate-900">
               LITADA
             </span>
-            <span className="block text-[11px] tracking-wide text-slate-500">
+            <span className="block text-[11px] tracking-[0.3em] text-slate-500">
               CONSULTING
             </span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
+        <nav className="hidden items-center gap-8 text-base font-bold text-slate-700 md:flex">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="transition-colors hover:text-slate-950">
               {link.label}
@@ -51,7 +54,7 @@ export function SiteHeader() {
 
       {open && (
         <div className="border-t border-slate-100 bg-white px-4 py-4 md:hidden">
-          <nav className="flex flex-col gap-3 text-sm font-medium text-slate-700">
+          <nav className="flex flex-col gap-3 text-base font-medium text-slate-700">
             {navLinks.map((link) => (
               <a
                 key={link.href}

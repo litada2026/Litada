@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
+
 import { Badge } from "@/components/ui/badge";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { heroHighlights, heroTags } from "@/data/site-data";
-
+import Image from "next/image";
+import logo from "@/app/public/logo.png"
 export function HeroSection() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-white to-fuchsia-50" />
-
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-2 lg:gap-14 lg:pb-20">
         <div>
           <Reveal trigger="onload">
@@ -48,10 +49,8 @@ export function HeroSection() {
 
         <Reveal trigger="onload" delay={0.25}>
           <div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-xl sm:p-10">
-            <div className="flex items-center justify-center rounded-2xl bg-slate-50 py-10">
-              <span className="flex h-32 w-32 items-center justify-center rounded-2xl bg-gradient-brand text-5xl font-extrabold text-white sm:h-40 sm:w-40 sm:text-6xl">
-                TD
-              </span>
+            <div className="flex items-center justify-center rounded-2xl bg-linear-to-br from-blue-100 via-violet-100 to-fuchsia-100 py-10">
+              <Image src={logo} alt="logo" className="flex h-56 w-56 items-center justify-center rounded-2xl text-5xl font-extrabold text-white sm:h-72 sm:w-72 sm:text-6xl"/>
             </div>
 
             <RevealGroup
@@ -61,8 +60,8 @@ export function HeroSection() {
               {heroHighlights.map((item) => (
                 <RevealItem key={item.title}>
                   <div className="h-full rounded-xl border border-slate-200 p-4">
-                    <p className="text-sm font-bold">{item.title}</p>
-                    <p className="mt-1 text-xs text-slate-500">{item.desc}</p>
+                    <p className="text-base font-bold">{item.title}</p>
+                    <p className="mt-1 text-base text-slate-500">{item.desc}</p>
                   </div>
                 </RevealItem>
               ))}

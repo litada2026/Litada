@@ -6,7 +6,7 @@ export function SolutionsSection() {
     <section id="solutions" className="bg-slate-950 py-16 text-white sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal>
-          <p className="text-sm font-bold tracking-wide text-fuchsia-400">
+          <p className="text-base font-bold tracking-wide text-fuchsia-400">
             LITADA SOLUTIONS
           </p>
         </Reveal>

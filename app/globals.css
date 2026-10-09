@@ -52,6 +52,16 @@ body {
   );
 }
 
+/* Very light brand wash for alternating section backgrounds */
+.bg-tint-brand {
+  background-image: linear-gradient(
+    135deg,
+    #f3f7ff,
+    #f8f6ff,
+    #fdf6fe
+  );
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

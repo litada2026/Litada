@@ -3,7 +3,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20">
+    <section id="contact" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
       <Reveal>
         <div className="flex flex-col items-start gap-6 rounded-2xl bg-gradient-brand p-8 text-white sm:p-10 md:flex-row md:items-center md:justify-between">
           <div>

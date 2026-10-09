@@ -8,7 +8,7 @@ export function CoreCapabilitiesSection() {
       <div className="mb-10 grid gap-8 lg:grid-cols-2 lg:items-end">
         <Reveal>
           <div>
-            <p className="text-sm font-bold tracking-wide text-indigo-600">
+            <p className="text-base font-bold tracking-wide text-indigo-600">
               WHAT WE DO
             </p>
             <h2 className="mt-2 text-3xl font-extrabold leading-tight sm:text-4xl">
@@ -29,13 +29,18 @@ export function CoreCapabilitiesSection() {
       <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {capabilities.map((cap) => (
           <RevealItem key={cap.number}>
-            <Card className="h-full overflow-hidden">
+            <Card className="h-full overflow-hidden transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-100 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
               <div className="h-1 bg-gradient-brand" />
               <CardContent className="pt-6">
-                <p className="text-xs font-bold text-slate-400">{cap.number}</p>
-                <h3 className="mt-1 text-lg font-bold">{cap.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{cap.description}</p>
-                <ul className="mt-4 space-y-1.5 text-sm text-slate-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-50 via-violet-50 to-fuchsia-50 text-indigo-600">
+                    <cap.icon className="h-5 w-5" />
+                  </div>
+                  <p className="text-xs font-bold text-slate-400">{cap.number}</p>
+                </div>
+                <h3 className="mt-4 text-lg font-bold">{cap.title}</h3>
+                <p className="mt-2 text-base text-slate-600">{cap.description}</p>
+                <ul className="mt-4 space-y-1.5 text-base text-slate-600">
                   {cap.bullets.map((bullet) => (
                     <li key={bullet} className="flex gap-2">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />

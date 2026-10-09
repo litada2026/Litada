@@ -6,7 +6,7 @@ export function AcademySection() {
   return (
     <section id="academy" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
       <Reveal>
-        <p className="text-sm font-bold tracking-wide text-indigo-600">
+        <p className="text-base font-bold tracking-wide text-indigo-600">
           LITADA ACADEMY
         </p>
       </Reveal>
@@ -35,12 +35,12 @@ export function AcademySection() {
             <h3 className="mt-2 text-2xl font-extrabold">
               Learn. Practice. Build. Present.
             </h3>
-            <p className="mt-3 text-sm opacity-90">
+            <p className="mt-3 text-base opacity-90">
               LITADA Academy kết hợp kiến thức, case doanh nghiệp, workshop,
               mentoring và project thực hành. Có thể triển khai in-house, cohort
               SME hoặc hợp tác cùng trường.
             </p>
-            <div className="mt-5 flex flex-wrap gap-2 text-sm font-medium">
+            <div className="mt-5 flex flex-wrap gap-2 text-base font-medium">
               {academyTags.map((tag) => (
                 <span key={tag} className="rounded-full bg-white/15 px-3 py-1.5">
                   {tag}
@@ -59,7 +59,7 @@ export function AcademySection() {
                     {program.tag}
                   </p>
                   <h4 className="mt-1 font-bold">{program.title}</h4>
-                  <p className="mt-1 text-sm text-slate-600">
+                  <p className="mt-1 text-base text-slate-600">
                     {program.description}
                   </p>
                 </CardContent>
