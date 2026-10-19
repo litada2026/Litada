@@ -7,7 +7,7 @@ import { SolutionsSection } from "@/components/sections/solutions-section";
 import { AcademySection } from "@/components/sections/academy-section";
 import { AudienceSection } from "@/components/sections/audience-section";
 import { HowWeWorkSection } from "@/components/sections/how-we-work-section";
-import { LeadershipSection } from "@/components/sections/leadership-section";
+import { ExpertNetworkSection } from "@/components/sections/expert-network-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <AcademySection />
         <AudienceSection />
         <HowWeWorkSection />
-        <LeadershipSection />
+        <ExpertNetworkSection />
         <CtaSection />
       </main>
       <SiteFooter />

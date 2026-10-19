@@ -4,6 +4,7 @@ import {
   Building2,
   ClipboardCheck,
   Compass,
+  Database,
   Gauge,
   GraduationCap,
   Handshake,
@@ -165,9 +166,27 @@ export const packages: Package[] = [
 ];
 
 export const solutionPillars = [
-  { index: "01", label: "CUSTOMER ENGAGEMENT", title: "Omnichannel & CX" },
-  { index: "02", label: "DATA INTELLIGENCE", title: "Data & BI" },
-  { index: "03", label: "ENTERPRISE AI", title: "AI Solutions" },
+  {
+    index: "01",
+    label: "CUSTOMER ENGAGEMENT",
+    title: "Omnichannel & CX",
+    desc: "CRM, Contact Center, web/app và loyalty trên một hành trình khách hàng thống nhất.",
+    icon: MessagesSquare,
+  },
+  {
+    index: "02",
+    label: "DATA INTELLIGENCE",
+    title: "Data & BI",
+    desc: "Nền tảng dữ liệu, dashboard và KPI giúp ra quyết định nhanh và chính xác.",
+    icon: Database,
+  },
+  {
+    index: "03",
+    label: "ENTERPRISE AI",
+    title: "AI Solutions",
+    desc: "AI agent, knowledge AI và tự động hóa gắn với use case đo được hiệu quả.",
+    icon: BrainCircuit,
+  },
 ];
 
 export const academyPrograms = [
@@ -217,15 +236,17 @@ export const workSteps = [
   { title: "ENABLE", desc: "Đào tạo & chuyển giao", icon: Users },
 ];
 
-export const leadership = {
-  role: "BUSINESS DEVELOPMENT & PARTNERSHIPS DIRECTOR",
-  name: "Nguyễn Thị Thanh Vy",
-  focus: "Strategy • Technology • Academy • Partnerships",
+export const contact = {
   email: "it@litada.com",
   website: "litada.com",
+  websiteUrl: "https://litada.com",
   location: "TP. Hồ Chí Minh, Việt Nam",
+};
+
+export const expertNetwork = {
+  focus: "Strategy • Technology • Academy • Partnerships",
   summary:
-    "Phụ trách phát triển khách hàng, đối tác và các chương trình hợp tác của LITADA; tập trung vào chuyển đổi số, PMO, Enterprise Architecture, AI, Omnichannel và đào tạo doanh nghiệp/trường học.",
+    "LITADA phát triển khách hàng, đối tác và các chương trình hợp tác — tập trung vào chuyển đổi số, PMO, Enterprise Architecture, AI, Omnichannel và đào tạo cho doanh nghiệp, trường học.",
   tags: [
     "Digital Transformation",
     "Project / PMO",
@@ -234,6 +255,6 @@ export const leadership = {
     "Omnichannel",
     "Corporate Training",
   ],
-  expertNetworkNote:
+  note:
     "Khi dự án cần năng lực chuyên sâu, LITADA huy động chuyên gia/đối tác phù hợp về CRM, Omnichannel, ERP, Data/AI, Cloud, Integration, Security và Training — dưới một mô hình quản trị thống nhất.",
 };

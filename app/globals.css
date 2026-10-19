@@ -8,6 +8,27 @@
   --color-brand-pink: #ec4899;
 
   --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 
   @keyframes fade-up {
     from {
@@ -23,6 +44,13 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keep anchored sections clear of the sticky header */
+  scroll-padding-top: 5rem;
+}
+
+::selection {
+  background-color: #e0e7ff;
+  color: #312e81;
 }
 
 body {
@@ -60,6 +88,29 @@ body {
     #f8f6ff,
     #fdf6fe
   );
+}
+
+/* Faint blueprint grid used behind the hero and dark sections */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(99 102 241 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(99 102 241 / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.mask-fade-y {
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
